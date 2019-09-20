@@ -1,0 +1,71 @@
+@mixin bold-color($fWeight:bold, $color: #ffffff){
+  font-weight: $fWeight;
+  color: $color;
+}
+
+$color-background: #38aef0;
+
+
+.group-created-box{
+  color: white;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-align: center;
+  width: 100vw;
+  &__text{
+    background-color: $color-background;
+  }
+}
+
+.wrapper{
+  margin: 0;
+  padding: 0;
+}
+
+.chat-side{
+  width: 300px;
+  @include bold-color();
+  float: left;
+  .side-header{
+    height: 100px;
+    display: flex;
+    background-color: #253141;
+    padding: 0 20px;
+    align-items: center;
+    &__box{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &__menu{
+      display: flex;
+      li{
+        margin-left: 0.3rem;
+      }
+      a{
+        color: white;
+      }
+    }
+    }
+  }
+  .groups{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px 20px 0;
+    overflow: scroll;
+    a{
+      color: #ffffff;
+    }
+    .group{
+      margin-bottom: 40px;
+      &__group-name{
+        font-size: 15px;
+        margin-bottom: 5px;
+        @include bold-color();
+      }
+      &__latest-message{
+        font-size: 11px;
+        @include bold-color();
+      }
+    }
+  }
+}
