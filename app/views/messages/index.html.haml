@@ -7,10 +7,10 @@
         %p.side-header__box__user-name Taro
         %ul.side-header__box__menu
           %li.side-header__box__menu__new-group
-            %a{href: "/groups/new"}
+            = link_to '#' do
               %i.fa.fa-edit
           %li.side-header__box__menu__edit-user
-            %a{href: "/users/700/edit"}
+            = link_to '#' do
               %i.fa.fa-cog
     .groups
       = render partial: "group"
@@ -23,7 +23,7 @@
           Member：
           %li.main-header__left-box__member-list__member Taro
           %li.main-header__left-box__member-list__member Syogo
-        %a{href: "/groups/1359/edit"}
+        = link_to '#' do
           .main-header__edit-btn Edit
     .messages
       = render partial: "message"
@@ -35,5 +35,5 @@
             %label.form-box__image{for: "message_image"}
               %i.fa.fa-image
               %input#message_image.form-box__image__file{name: "message_image", type: "file"}/
-        %a{href: "/"}
+        = link_to '#' do
           .submit-btn Send
