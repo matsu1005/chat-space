@@ -7,10 +7,10 @@
         %p.side-header__box__user-name Taro
         %ul.side-header__box__menu
           %li.side-header__box__menu__new-group
-            %a{:href => "/groups/new"}
+            %a{href: "/groups/new"}
               %i.fa.fa-edit
           %li.side-header__box__menu__edit-user
-            %a{:href => "/users/700/edit"}
+            %a{href: "/users/700/edit"}
               %i.fa.fa-cog
     .groups
       = render partial: "group"
@@ -23,17 +23,17 @@
           Member：
           %li.main-header__left-box__member-list__member Taro
           %li.main-header__left-box__member-list__member Syogo
-        %a{:href => "/groups/1359/edit"}
+        %a{href: "/groups/1359/edit"}
           .main-header__edit-btn Edit
     .messages
       = render partial: "message"
 
     .form
-      %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/1408/messages", :enctype => "multipart/form-data", :method => "post"}
+      %form#new_message.new_message{"accept-charset" => "UTF-8", action: "/groups/1408/messages", enctype: "multipart/form-data", method: "post"}
         .form-box
           %input.form-box__text{placeholder: "type a message",type: "text"}
-            %label.form-box__image{:for => "message_image"}
+            %label.form-box__image{for: "message_image"}
               %i.fa.fa-image
-              %input#message_image.form-box__image__file{:name => "message_image", :type => "file"}/
-        %a{:href => "/"}
+              %input#message_image.form-box__image__file{name: "message_image", type: "file"}/
+        %a{href: "/"}
           .submit-btn Send
