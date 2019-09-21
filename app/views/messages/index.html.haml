@@ -18,7 +18,7 @@
   .chat-main
     .main-header
       .main-header__left-box
-        %h2.main-header__left-box__current-group{"data-group_id" => "1359"} サッカー
+        %h2.main-header__left-box__current-group{"data-group_id": "1359"} サッカー
         %ul.main-header__left-box__member-list
           Member：
           %li.main-header__left-box__member-list__member Taro
@@ -29,7 +29,7 @@
       = render partial: "message"
 
     .form
-      %form#new_message.new_message{"accept-charset" => "UTF-8", action: "/groups/1408/messages", enctype: "multipart/form-data", method: "post"}
+      %form#new_message.new_message{"accept-charset": "UTF-8", action: "/groups/1408/messages", enctype: "multipart/form-data", method: "post"}
         .form-box
           %input.form-box__text{placeholder: "type a message",type: "text"}
             %label.form-box__image{for: "message_image"}
