@@ -6,14 +6,16 @@
 $color-background: #38aef0;
 
 
-.group-created-box{
-  color: white;
-  font-size: 1rem;
-  font-weight: lighter;
-  text-align: center;
-  width: 100vw;
-  &__text{
+.flash-box{
+  .notice{
     background-color: $color-background;
+    text-align: center;
+    color: white;
+  }
+  .alert{
+    background-color: #F35500;
+    color: white;
+    text-align: center;
   }
 }
 
