@@ -20,12 +20,12 @@
         %p.message__upper-info__date 2019/09/15(Sun) 16:17:38
       %p.message__text こんにちは
   .form
-    %form#new_message.new_message{"accept-charset": "UTF-8", action: "/groups/1408/messages", enctype: "multipart/form-data", method: "post"}
+    %form#new_message.new_message{"accept-charset": "UTF-8", action: "/groups/1/messages", enctype: "multipart/form-data", method: "post"}
       .form-box
         %input.form-box__text{placeholder: "type a message",type: "text"}
           %label.form-box__image{for: "message_image"}
             %i.fa.fa-image
-            %input#message_image.form-box__image__file{name: "message_image", type: "file"}/
-      = link_to '#' do
+            %input#message_image.form-box__image__file{name: "image", type: "file"}/
+      = link_to '/groups/1/messages' do
         .submit-btn Send
   
