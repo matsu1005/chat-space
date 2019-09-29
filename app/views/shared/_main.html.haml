@@ -4,11 +4,11 @@
       %h2.main-header__left-box__current-group{"data-group_id": "1359"} サッカー
       %ul.main-header__left-box__member-list
         Member：
-        %li.main-header__left-box__member-list__member Taro
-        %li.main-header__left-box__member-list__member Syogo
+        = render partial: 'shared/member', locals: {group: @group}
       = link_to '/groups/1/edit' do
         .main-header__edit-btn Edit
-  = render partial: "shared/message"
+  .messages
+    = render partial: 'shared/message', collection: @messages
   .form
     #new_message.new_message
     = form_for [@group,@message] do |f|

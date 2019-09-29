@@ -12,9 +12,10 @@
             %i.fa.fa-cog
   .groups
     - current_user.groups.each do |group|
-      = link_to 'groups/1/messages' do
+      = link_to group_messages_path(group) do
         .group
           %p.group__group-name 
             = group.group_name
-          %p.group__latest-message 
-            メッセージはまだありません。
+          %p.group__latest-message
+            = group.show_last_message
+            
