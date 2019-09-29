@@ -3,6 +3,8 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :update]
 
   def index
+    @messages = Message.all
+    
   end
   
   def new
@@ -15,7 +17,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to :root, notice: 'グループを作成しました。'
     else
-      render 'new', notice: 'ssss'
+      render 'new'
     end
   end
 
