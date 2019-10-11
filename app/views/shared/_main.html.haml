@@ -1,7 +1,8 @@
 .chat-main
   .main-header
     .main-header__left-box
-      %h2.main-header__left-box__current-group{"data-group_id": "1359"} サッカー
+      %h2.main-header__left-box__current-group
+        = @group.group_name
       %ul.main-header__left-box__member-list
         Member：
         = render partial: 'shared/member', locals: {group: @group}
