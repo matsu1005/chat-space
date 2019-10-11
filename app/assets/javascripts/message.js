@@ -34,8 +34,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('.form-box__text').val('');
-      $('.form-box__image__file').val('');
+      $("form")[0].reset();
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
     })
     .fail(function(data){
