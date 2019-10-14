@@ -75,7 +75,6 @@ $(document).ready(function(){
   $("#user-search-result").on("click", `.user-search-add`, function() {
     var id = $(this).attr('data-user-id');
     var name = $(this).attr('data-user-name');
-    console.log(id);
     addUser(id,name);
     $(this).parent().remove();
   });
