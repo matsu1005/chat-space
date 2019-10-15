@@ -28,7 +28,7 @@ $(document).ready(function(){
 
   function addUser(id,name){
     var html = `<div class='chat-group-user clearfix js-chat-member' id='${ id }'>
-                  <input name='group[user_ids][]' type='hidden' value='${ id }'>
+                  <input id="group_user_${ id }", name="group[user_ids][]" type='hidden' value='${ id }'>
                   <p class='chat-group-user__name'>${ name }</p>
                   <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
                 </div>`
