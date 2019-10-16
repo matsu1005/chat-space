@@ -19,25 +19,6 @@ $(function(){
   return html;
   }
 
-  // function buildMessageHTML(message) {
-  //   var img = (message.image) ? `<img src=${message.image}, class="lower-message__image" >`: "";
-  //   var html = `<div class="message", data-message-id = "${message.id}"> ;
-  //                 <div class="upper-message"> 
-  //                   <div class="upper-message__user-name"> 
-  //                     ${message.user_name} 
-  //                   </div> 
-  //                   <div class="upper-message__date"> 
-  //                     ${message.date} 
-  //                   </div> 
-  //                 </div>
-  //                   <p class="lower-message__content">
-  //                     ${message.text} 
-  //                   </p>
-  //                 ${img}
-  //               </div>`
-  // return html;
-  // }
-
   $(".new_message").on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -82,7 +63,7 @@ $(function(){
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight},'fast');
       })
       .fail(function(){
-        console.log('error')
+        alert("自動更新に失敗しました")
       })
     }
   }
